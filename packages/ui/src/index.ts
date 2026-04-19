@@ -15,10 +15,13 @@ export type UiIconOptions = {
   style?: Record<string, string>;
 };
 
-function normalizeSvgStrokeColor(svg: string): string {
+function normalizeSvgColor(svg: string): string {
   return svg
-    .replace(/stroke\s*=\s*"(?!(?:none|currentColor))[^"]*"/gi, 'stroke="currentColor"')
-    .replace(/stroke\s*=\s*'(?!(?:none|currentColor))[^']*'/gi, "stroke='currentColor'");
+    .replace(/stroke\s*=\s*"(?!(?:none|currentColor))[^\"]*"/gi, 'stroke="currentColor"')
+    .replace(/stroke\s*=\s*'(?!(?:none|currentColor))[^']*'/gi, "stroke='currentColor'")
+    .replace(/fill\s*=\s*"(?!(?:none|currentColor))[^\"]*"/gi, 'fill="currentColor"')
+    .replace(/fill\s*=\s*'(?!(?:none|currentColor))[^']*'/gi, "fill='currentColor'")
+    .replace(/(fill|stroke)\s*:\s*(?!(?:none|currentColor))([^;"']+)/gi, '$1:currentColor');
 }
 
 function hasThemeIconColor(): boolean {
@@ -42,7 +45,7 @@ export function createUiIcon(
     icon.trim().startsWith('<svg') &&
     (options.color != null || options.muted != null || hasThemeIconColor());
 
-  const content = shouldNormalize ? normalizeSvgStrokeColor(icon) : icon;
+  const content = shouldNormalize ? normalizeSvgColor(icon) : icon;
 
   if (typeof content === 'string' && content.trim().startsWith('<svg')) {
     span.classList.add('icon--svg');
