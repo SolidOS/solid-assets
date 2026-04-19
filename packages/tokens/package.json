@@ -1,0 +1,17 @@
+{
+  "name": "@solidos/tokens",
+  "version": "0.1.0",
+  "description": "Frameworkless CSS theme tokens for SolidOS",
+  "license": "MIT",
+  "files": [
+    "dist",
+    "src/themes.css",
+    "README.md"
+  ],
+  "exports": {
+    "./themes.css": "./dist/themes.css"
+  },
+  "scripts": {
+    "build": "node ../../scripts/build-tokens.mjs"
+  }
+}
