@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SolidOS Assets – webpack demo</title>
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        background: var(--color-surface, #fff);
+        color: var(--color-text, #111);
+        padding: 2rem;
+        transition: background 0.2s, color 0.2s;
+      }
+
+      .Icon {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        background: var(--icon-color, currentColor);
+        -webkit-mask: var(--icon-mask) no-repeat center / contain;
+        mask: var(--icon-mask) no-repeat center / contain;
+        margin-right: 0.5rem;
+      }
+
+      .Logo {
+        display: block;
+        margin-top: 1.5rem;
+        height: 48px;
+      }
+
+      button {
+        margin-top: 1rem;
+        padding: 0.4rem 0.9rem;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>SolidOS Assets webpack demo</h1>
+    <p>UI icons (single-color, themed via CSS mask):</p>
+    <div id="icons"></div>
+    <p>Logo (multi-color, via &lt;img&gt;):</p>
+    <div id="logo"></div>
+    <button id="theme-toggle">Toggle light / dark theme</button>
+  </body>
+</html>

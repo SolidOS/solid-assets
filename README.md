@@ -21,6 +21,11 @@ npm run build
 
 This runs all workspace build scripts and produces publishable package outputs in each package `dist/` directory.
 
+## Webpack demo
+
+A fully working webpack 5 example lives in [`examples/webpack-demo/`](./examples/webpack-demo/README.md).
+It demonstrates importing theme tokens and tree-shaken icons in a real application bundle.
+
 ## Webpack consumer example
 
 Use webpack 5 asset modules so only imported icons are emitted:
