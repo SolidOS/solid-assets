@@ -1,18 +1,2 @@
-:root,
-:root[data-theme='light'] {
-  --color-text: #111827;
-  --color-text-muted: #4b5563;
-  --color-surface: #ffffff;
-  --color-border: #d1d5db;
-  --icon-color: var(--color-text);
-  --icon-color-muted: var(--color-text-muted);
-}
-
-:root[data-theme='dark'] {
-  --color-text: #f9fafb;
-  --color-text-muted: #d1d5db;
-  --color-surface: #111827;
-  --color-border: #374151;
-  --icon-color: var(--color-text);
-  --icon-color-muted: var(--color-text-muted);
-}
+@import url('./light.css');
+@import url('./dark.css');

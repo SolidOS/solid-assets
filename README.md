@@ -76,3 +76,9 @@ const logo = document.createElement('img');
 logo.src = logoUrl;
 logo.alt = 'SolidOS';
 ```
+
+## Generative AI usage
+The SolidOS team is using GitHub Copilot integrated in Visual Studio Code. 
+We have added comments in the code to make it explicit which parts are 100% written by AI. This repo was created with its initial structure by Copilot after a long conversation about state of the art usage of CSS variables and icons. The prompt is very long to paste here. Initial PR was: https://github.com/SolidOS/solid-assets/pull/1 followed by https://github.com/SolidOS/solid-assets/pull/2
+
+### Prompt usage history:

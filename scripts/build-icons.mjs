@@ -1,4 +1,4 @@
-import { mkdir, readdir, readFile, writeFile } from 'node:fs/promises';
+import { mkdir, readdir, readFile, writeFile, copyFile } from 'node:fs/promises';
 import { dirname, extname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { optimize } from 'svgo';
@@ -31,13 +31,18 @@ async function buildSet(sourceDir, destinationDir, config) {
 
   await Promise.all(
     entries
-      .filter((entry) => entry.isFile() && extname(entry.name) === '.svg')
+      .filter((entry) => entry.isFile())
       .map(async (entry) => {
         const sourcePath = resolve(sourceDir, entry.name);
         const destinationPath = resolve(destinationDir, entry.name);
-        const svg = await readFile(sourcePath, 'utf8');
-        const result = optimize(svg, { path: sourcePath, ...config });
-        await writeFile(destinationPath, result.data, 'utf8');
+
+        if (extname(entry.name) === '.svg') {
+          const svg = await readFile(sourcePath, 'utf8');
+          const result = optimize(svg, { path: sourcePath, ...config });
+          await writeFile(destinationPath, result.data, 'utf8');
+        } else {
+          await copyFile(sourcePath, destinationPath);
+        }
       })
   );
 }
