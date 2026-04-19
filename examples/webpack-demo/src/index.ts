@@ -1,7 +1,7 @@
-// Import theme tokens – the CSS variables are applied globally.
 import '@solidos/tokens/themes.css';
+import '@solid/ui/styles.css';
+import { createUiIcon, createLogo, toggleTheme } from '@solid/ui';
 
-// Import all UI icons so webpack emits those SVG files.
 import bentoIcon from '@solidos/icons/icons/bento.svg';
 import birthdayIcon from '@solidos/icons/icons/birthday.svg';
 import cameraIcon from '@solidos/icons/icons/camera.svg';
@@ -43,37 +43,21 @@ import signOutIcon from '@solidos/icons/icons/signOut.svg';
 import solidIcon from '@solidos/icons/icons/solid.svg';
 import whiteStarIcon from '@solidos/icons/icons/white-star.svg';
 import trashIcon from '@solidos/icons/icons/trash.svg';
-import menuIcon from '@solidos/icons/icons/menu.svg';
-import logoUrl from '@solidos/icons/logos/solidos.svg';
+import personIcon from '@solidos/icons/icons/person.svg';
+import logoUrl from '@solidos/icons/logos/discord.png';
 
 // Apply the default light theme; change to 'dark' for the dark variant.
 document.documentElement.dataset.theme = 'light';
 
 // Toggle theme on button click.
 const toggleBtn = document.getElementById('theme-toggle');
-toggleBtn.addEventListener('click', () => {
-  const current = document.documentElement.dataset.theme;
-  document.documentElement.dataset.theme = current === 'dark' ? 'light' : 'dark';
-});
+toggleBtn?.addEventListener('click', toggleTheme);
 
-// Render UI icons using CSS mask + --icon-color token.
-function createUiIcon(url, label) {
-  const span = document.createElement('span');
-  span.className = 'Icon';
-  span.setAttribute('role', 'img');
-  span.setAttribute('aria-label', label);
-  span.style.setProperty('--icon-mask', `url("${url}")`);
-  return span;
-}
-
-document.getElementById('icons').append(
+document.getElementById('icons')?.append(
   createUiIcon(searchIcon, 'Search'),
-  createUiIcon(menuIcon, 'Menu')
+  createUiIcon(personIcon, 'Profile')
 );
 
 // Render the multi-color logo via <img>.
-const logo = document.createElement('img');
-logo.src = logoUrl;
-logo.alt = 'SolidOS';
-logo.className = 'Logo';
-document.getElementById('logo').appendChild(logo);
+const logo = createLogo(logoUrl, 'SolidOS');
+document.getElementById('logo')?.appendChild(logo);

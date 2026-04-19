@@ -2,6 +2,6 @@
     viewBox="0 0 24 24" 
     fill="none"
   >
-    <path d="M2.91602 7H11.0827" stroke="#314158" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M7 2.9165V11.0832" stroke="#314158" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M2.91602 7H11.0827" stroke="currentColor" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M7 2.9165V11.0832" stroke="currentColor" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

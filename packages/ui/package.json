@@ -1,0 +1,25 @@
+{
+  "name": "@solid/ui",
+  "version": "0.1.0",
+  "description": "UI helpers and theme-aware icon utilities for SolidOS",
+  "license": "MIT",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./styles.css": "./dist/styles.css"
+  },
+  "dependencies": {
+    "@solidos/icons": "^0.1.0",
+    "@solidos/tokens": "^0.1.0"
+  },
+  "scripts": {
+    "build": "node ../../scripts/build-ui.mjs"
+  }
+}

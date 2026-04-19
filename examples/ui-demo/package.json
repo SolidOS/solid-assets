@@ -1,8 +1,8 @@
 {
-  "name": "webpack-demo",
+  "name": "ui-demo",
   "version": "0.0.1",
   "private": true,
-  "description": "Demonstrates consuming @solid/ui, @solidos/tokens, and @solidos/icons with webpack 5",
+  "description": "Demonstrates consuming @solid/ui with @solidos/tokens and @solidos/icons using webpack 5",
   "scripts": {
     "build": "webpack --mode production",
     "dev": "webpack serve --mode development --open"

@@ -1,6 +1,6 @@
 # webpack-demo
 
-A minimal webpack 5 project that demonstrates consuming `@solidos/tokens` and `@solidos/icons` in an application bundle.
+A minimal webpack 5 project that demonstrates consuming `@solid/ui`, `@solidos/tokens`, and `@solidos/icons` in an application bundle.
 
 ## What it shows
 

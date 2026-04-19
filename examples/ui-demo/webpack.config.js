@@ -13,18 +13,20 @@ module.exports = {
   },
   module: {
     rules: [
-      // Emit SVG files as separate URL-addressable assets (tree-shakeable —
-      // only icons that are actually imported will be included in the build).
       {
-        test: /\.tsx?$/i,
-        use: 'ts-loader',
-        exclude: /node_modules/
+        test: /\.svg$/i,
+        resourceQuery: /raw/,
+        type: 'asset/source'
       },
       {
         test: /\.(svg|png)$/i,
         type: 'asset/resource'
       },
-      // Extract CSS into a separate stylesheet for production.
+      {
+        test: /\.tsx?$/i,
+        use: 'ts-loader',
+        exclude: /node_modules/
+      },
       {
         test: /\.css$/i,
         use: [MiniCssExtractPlugin.loader, 'css-loader']
