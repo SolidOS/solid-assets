@@ -1,0 +1,14 @@
+{
+  "name": "solid-assets",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces"
+  },
+  "devDependencies": {
+    "svgo": "^4.0.0"
+  }
+}

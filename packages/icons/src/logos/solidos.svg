@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 48" role="img" aria-label="SolidOS">
+  <rect width="160" height="48" rx="8" fill="#0f172a"/>
+  <circle cx="24" cy="24" r="12" fill="#22d3ee"/>
+  <path d="M52 16h10c4 0 7 2.2 7 5.9 0 4-3 6.1-7 6.1h-5v8h-5V16Zm9 8c1.8 0 3-.9 3-2.1 0-1.5-1.2-2-3-2h-4v4.1h4ZM74 16h5v20h-5V16Zm9.9 0h7.4c6.7 0 11 3.9 11 10s-4.3 10-11 10h-7.4V16Zm7.2 15.5c3.7 0 6.1-2 6.1-5.5s-2.4-5.5-6.1-5.5h-2.2v11h2.2Z" fill="#e2e8f0"/>
+</svg>
