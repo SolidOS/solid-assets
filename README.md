@@ -1,3 +1,7 @@
+# This repo is not in use, was/is an experiment. Do not use it!
+
+
+
 # solid-assets
 
 npm-publishable monorepo for SolidOS theme tokens and icons.
